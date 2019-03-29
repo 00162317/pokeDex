@@ -38,9 +38,6 @@ public class MainActivity extends AppCompatActivity {
         listDatos=new ArrayList<String>();
         new FetchPokemonTask().execute("");
 
-        pokemonAdapter adapter = new pokemonAdapter(listDatos);
-        recycler.setAdapter(adapter);
-
         Log.d("Hi", String.valueOf(listDatos.size()));
         /*bindView();
 
@@ -88,6 +85,13 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
                 return "";
             }
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            pokemonAdapter adapter = new pokemonAdapter(listDatos);
+            recycler.setAdapter(adapter);
         }
     }
 }

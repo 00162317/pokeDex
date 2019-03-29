@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class NetworkUtils {
 
-    public static final String POKEMON_API_BASE_URL = "https://pokeapi.co/api/v2/pokemon/?offset=20&limit=20";
+    public static final String POKEMON_API_BASE_URL = "https://pokeapi.co/api/v2/pokemon/?offset=20&limit=900";
     //public static final String POKEMON_INFO = "pokemon";
 
     private static final String TAG = NetworkUtils.class.getSimpleName();
